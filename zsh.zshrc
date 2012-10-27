@@ -54,6 +54,10 @@ autoload -U colors; colors
 # Initialize compinit
 autoload -U compinit; compinit
 
+#----------------------------------------------------------------------------#
+# include completion
+#----------------------------------------------------------------------------#
+. ~/.zsh/completion
 
 #-----------------------------------------------------------------------------#
 # Load plugins and settings
@@ -181,8 +185,9 @@ fi
 
 # lists
 alias l='ls -CF'
-alias la='ls -A'
+alias la='ls -AL'
 alias ll='ls -lF'
+alias lla='ls -lsa'
 
 # move-rename w/o correction and always in interactive mode
 alias mv='nocorrect mv -i'
@@ -207,5 +212,13 @@ SAVEHIST=5000
 # Commands count histroy in one seance
 HISTSIZE=5000
 
+# Append history list to the history file (important for multiple parallel zsh sessions!)
+setopt  APPEND_HISTORY
+
+setopt  HIST_IGNORE_ALL_DUPS
+
+setopt  HIST_IGNORE_SPACE
+
+setopt  HIST_REDUCE_BLANKS
 
 # zsh.zshrc is end here
