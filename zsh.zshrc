@@ -37,9 +37,6 @@ export PATH=$PATH:/opt/local/bin:/opt/local/sbin
 # Man path (add macports)
 export MANPATH=/opt/local/share/man:$MANPATH
 
-# Set terminal type
-export TERM=xterm-color
-
 # Enable color in the terminal
 export CLICOLOR=1
 
