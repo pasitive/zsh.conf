@@ -2,9 +2,6 @@
 # Completion settings.
 #----------------------------------------------------------------------------#
 
-# Initialize compinit.
-autoload -U compinit; compinit
-
 # Matches case insensitive for lowercase.
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
