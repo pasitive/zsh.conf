@@ -28,11 +28,16 @@ else if [[ "$platform" == "Darwin" ]]
     fi
 fi
 
-# lists
+# lists.
 alias l='ls -CF'
 alias la='ls -AL'
 alias ll='ls -lF'
 alias lla='ls -lsa'
+
+# Change directory.
+alias ..='cd ..'
+alias ...='cd ../..'
+
 
 # Move-rename w/o correction and always in interactive mode.
 alias mv='nocorrect mv -i'
