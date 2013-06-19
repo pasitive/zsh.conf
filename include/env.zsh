@@ -6,7 +6,7 @@
 export EDITOR=vim
 
 # Path (add macports)
-export PATH=$PATH:/opt/local/bin:/opt/local/sbin
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 
 # Man path (add macports)
 export MANPATH=/opt/local/share/man:$MANPATH

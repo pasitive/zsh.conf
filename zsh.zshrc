@@ -4,6 +4,15 @@
 #============================================================================#
 
 #----------------------------------------------------------------------------#
+# zsh autoloads.
+#----------------------------------------------------------------------------#
+
+# Autoload complete
+autoload -U compinit compdef
+compinit
+
+
+#----------------------------------------------------------------------------#
 # zsh configuration constans.
 #----------------------------------------------------------------------------#
 
@@ -74,6 +83,11 @@ function zsh_load_plugin_dir()
 #----------------------------------------------------------------------------#
 # Load plugins and settings
 #----------------------------------------------------------------------------#
+
+if ! type _get_comp_words_by_ref >/dev/null 2>&1; then
+    # In some zsh version this function is defined to stub.
+    unset -f _get_comp_words_by_ref
+fi
 
 # Load all plugins.
 zsh_load_plugin_dir $ZSH_HOME/plugins
